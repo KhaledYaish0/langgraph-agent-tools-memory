@@ -6,13 +6,13 @@ A LangGraph-powered agent that uses **tool calling** (Google Serper search + Pus
 > This repository packages the notebook from **Week 4, Day 3** into a clean, runnable project. The original notebook is in `notebooks/langgraph_agent_lab2.ipynb`.
 
 ## Features
-- 🧠 **LangGraph** state machine with typed state (`TypedDict`) and `add_messages` reducer
-- 🔧 **Tools**: `search` (Google Serper via `langchain_community`) and `send_push_notification` (Pushover)
-- 💬 **Gradio** chat interface (`gr.ChatInterface`)
-- 💾 **Memory / Checkpointing**:
+- **LangGraph** state machine with typed state (`TypedDict`) and `add_messages` reducer
+- **Tools**: `search` (Google Serper via `langchain_community`) and `send_push_notification` (Pushover)
+- **Gradio** chat interface (`gr.ChatInterface`)
+- **Memory / Checkpointing**:
   - In-memory via `MemorySaver`
   - Persistent via `SqliteSaver` (`memory.db`)
-- 🔍 **LangSmith-ready** (optional; enable in `.env` if you use it)
+- **LangSmith-ready** (optional; enable in `.env` if you use it)
 
 ## Architecture (Notebook Overview)
 - Builds a `StateGraph[State]` with nodes: `chatbot`, `tools`
